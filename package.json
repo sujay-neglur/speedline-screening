@@ -1,0 +1,17 @@
+{
+  "name": "speedline-screening",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "printwinners1": "jest first.test.js",
+    "printwinners1fixed": "jest firstFixed.test.js",
+    "printwinners2": "jest second.test.js",
+    "printwinners2fixed": "jest secondFixed.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^25.1.0"
+  }
+}
