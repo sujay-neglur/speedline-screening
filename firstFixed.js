@@ -31,7 +31,7 @@ function printWinners1Fixed(inputArray) {
   /**
    * The fix of the bug.
    * This will check if the final order is unique
-   printWinners1*/
+   */
   if (numberOfSimilarOrders === 1 && previousToppingCount === 3 &&previousEmail !== "") {
     // Print out the email.
     console.log(previousEmail);
