@@ -19,24 +19,20 @@ describe("test the printWinners2 function", function() {
     orders = [];
     consoleSpy.mockClear();
   });
-  it("should print the winners as email@example.com and andrew@gmail.com ", function(done) {
+  
+  it("should print the winners as email@example.com. andrew@gmail.com should not be printed", function(done) {
     orders = [
       { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
       ...orders,
+      { email: "", toppings: ["Chilly", "Oregano", "Tomatoes"] },
       { email: "andrew@gmail.com", toppings: ["Chilly", "Oregano", "Tomatoes"] }
-    ];
-    printWinners2Fixed(orders);
-    expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
-    expect(consoleSpy).toHaveBeenCalledWith("andrew@gmail.com");
-    done();
-  });
-  it("should print the winners as email@example.com", function(done) {
-    // Add the unique records to the array
-    orders = [
-      { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
     ];
     printWinners2(orders);
     expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
+    /**
+     * Bug for the second implementation of the algorithm as given in the file second.js
+     */
+    expect(consoleSpy).not.toHaveBeenCalledWith("andrew@gmail.com");
     done();
   });
 
@@ -58,6 +54,33 @@ describe("test the printWinners2 function", function() {
       ...orders,
       { email: "andrew@gmail.com", toppings: ["Chilly", "Oregano", "Tomatoes"] }
     ];
+    printWinners2Fixed(orders);
+    expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
+    /**
+     * This is a bug for the first implentation of the alogrithm as given in file first.js
+     * The second implementation does not have this bug.
+     */
+    expect(consoleSpy).toHaveBeenCalledWith("andrew@gmail.com");
+    done();
+  });
+
+  it("should print the winners as email@example.com", function(done) {
+    // Add the unique records to the array
+    orders = [
+      { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
+    ];
+    printWinners2(orders);
+    expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
+    done();
+  });
+
+
+  it("should print the winners as email@example.com and andrew@gmail.com ", function(done) {
+    orders = [
+      { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
+      ...orders,
+      { email: "andrew@gmail.com", toppings: ["Chilly", "Oregano", "Tomatoes"] }
+    ];
     printWinners2(orders);
     expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
     /**
@@ -65,22 +88,6 @@ describe("test the printWinners2 function", function() {
      * This bug is not present in the second implementation.
      */
     expect(consoleSpy).toHaveBeenCalledWith("andrew@gmail.com");
-    done();
-  });
-
-  it("should print the winners as email@example.com. andrew@gmail.com should not be printed", function(done) {
-    orders = [
-      { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
-      ...orders,
-      { email: "", toppings: ["Chilly", "Oregano", "Tomatoes"] },
-      { email: "andrew@gmail.com", toppings: ["Chilly", "Oregano", "Tomatoes"] }
-    ];
-    printWinners2(orders);
-    expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
-    /**
-     * Bug for the second implementation of the algorithm as given in the file second.js
-     */
-    expect(consoleSpy).not.toHaveBeenCalledWith("andrew@gmail.com");
     done();
   });
 

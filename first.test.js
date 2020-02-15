@@ -20,7 +20,7 @@ describe("test the printWinners1 function", function() {
     consoleSpy.mockClear();
   });
 
-  it("should print the winners as email@example.com", function(done) {
+  it("should print the winner as email@example.com", function(done) {
     // Add the unique records to the array
     orders = [
       { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
@@ -31,8 +31,8 @@ describe("test the printWinners1 function", function() {
     printWinners1(orders);
     expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
     /**
-     * The first implementation does not have this bug.
      * This is a bug for the second implentation of the alogrithm as given in file second.js
+     * The first implementation does not have this bug.
      */
     expect(consoleSpy).not.toHaveBeenCalledWith("andrew@gmail.com");
     done();

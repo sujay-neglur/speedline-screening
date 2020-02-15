@@ -2,6 +2,9 @@ function printWinners2Fixed(inputArray) {
   let hashTable = new Map();
   // Iterate through the array, with "order" being each item in the array.
   inputArray.map(order => {
+    /**
+     * The condition to check the email is removed as the first step is to only find the combinations.
+     */
     if (order.toppings.length === 3) {
       let toppingsAsString = order.toppings.toString();
       let matchingValue = hashTable.get(toppingsAsString);
@@ -20,6 +23,9 @@ function printWinners2Fixed(inputArray) {
   });
   // Iterate through the values in the hash table, with "value" being each value.
   hashTable.forEach(value => {
+    /**
+     * Check the email here after the combinations are found.
+     */
     if (!value.duplicate && value.email) {
       // Print out the email.
       console.log(value.email);

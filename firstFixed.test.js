@@ -20,7 +20,7 @@ describe.only("test the printWinners1Fixed function", function() {
     consoleSpy.mockClear();
   });
 
-  it("should print the winners as email@example.com", function(done) {
+  it("should print the winner as email@example.com", function(done) {
     orders = [
       { email: "email@example.com", toppings: ["Beef", "Chicken", "Tomatoes"] },
       {email:"", toppings:["Chilly", "Oregano", "Tomatoes"]},
