@@ -23,9 +23,26 @@
 ***
 
 ### Answers to the Questions
-Describe some data sets that you would use to test any proposed implementation and its accuracy.
+
+##### Describe some data sets that you would use to test any proposed implementation and its accuracy.
 
 [Datasets](https://github.com/sujayneglur123/speedline-screening/wiki/Datasets)
+
+##### Did you identify any bugs in these proposed implementations?
+
+[Bugs in the proposed implementations](https://github.com/sujayneglur123/speedline-screening/wiki/Bugs-in-the-proposed-implementations)
+
+##### Once any small bugs are fixed, will either of these approaches give us the output we're looking for?
+
+[Bug Fixes](https://github.com/sujayneglur123/speedline-screening/wiki/Bug-Fixes)
+
+##### What are some advantages or disadvantages of these approaches?
+
+[Advantages and Disadvantages](https://github.com/sujayneglur123/speedline-screening/wiki/Advantages-and-Disadvantages)
+
+##### If we were querying a database instead of working with an in-memory structure, would we use a significantly different algorithm to find the winners? If so, how would you expect that algorithm to differ in performance and why?
+
+[Querying Database](https://github.com/sujayneglur123/speedline-screening/wiki/Querying-a-database) 
  
 
 ### Contact
