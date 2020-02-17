@@ -13,7 +13,7 @@
 ***
 ### Steps to run
 
-1. Clone the project using `git clone github.com/sujayneglur123/speedline-screening.git` or download the zip file and extract it.
+1. Clone the project using `git clone https://github.com/sujayneglur123/speedline-screening.git` or download the zip file and extract it.
 1. Navigate to the project directory and run `npm install` to install the dependencies (jest).
 1. Execute the command `npm run printwinners1` to run the test scenarios for the file _first.js_. The test which catches the bug will fail.
 1. Execute the command `npm run printwinners1fixed` to run the test scenarios for the file _firstFixed.js_. The test scenario that failed in _first.test.js_ will pass.
