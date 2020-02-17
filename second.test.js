@@ -54,7 +54,7 @@ describe("test the printWinners2 function", function() {
       ...orders,
       { email: "andrew@gmail.com", toppings: ["Chilly", "Oregano", "Tomatoes"] }
     ];
-    printWinners2Fixed(orders);
+    printWinners2(orders);
     expect(consoleSpy).toHaveBeenCalledWith("email@example.com");
     /**
      * This is a bug for the first implentation of the alogrithm as given in file first.js
